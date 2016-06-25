@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/fondo">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nep WearAmi"
+        android:id="@+id/cont"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/dato"
+        android:text="Data:"
+        android:layout_marginLeft="0dp"
+        android:width="320dp"
+        android:height="100dp"
+        android:layout_below="@+id/checkBoxData"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="27dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ipText"
+        android:editable="true"
+        android:elegantTextHeight="false"
+        android:enabled="true"
+        android:text="130.251.13.125"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginTop="-12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP of the server:"
+        android:id="@+id/textView"
+        android:textColor="#5a8add"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="0dp"
+        android:layout_below="@+id/cont"
+        android:layout_alignStart="@+id/dato"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset IP"
+        android:id="@+id/buttonReset"
+        android:onClick="buttonClickReset"
+        android:layout_marginTop="29dp"
+        android:width="150dp"
+        android:layout_below="@+id/ipText"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show acceleration data"
+        android:id="@+id/checkBoxData"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/buttonReset"
+        android:layout_centerHorizontal="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send data"
+        android:id="@+id/checkBoxS"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/dato"
+        android:layout_centerHorizontal="true"
+        android:checked="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP"
+        android:id="@+id/button"
+        android:onClick="buttonClickStop"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/ipText"
+        android:layout_alignEnd="@+id/ipText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/button2"
+        android:onClick="buttonClickStart"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/ipText"
+        android:layout_toStartOf="@+id/ipText" />
+</RelativeLayout>
